@@ -1,0 +1,28 @@
+apiVersion: v1
+policies:
+  - name: labels_best_practices
+    isDefault: true
+    rules:
+      - identifier: CUSTOM_CONTAINER_INSTANCES
+        messageOnFailure: ''
+      
+
+customRules:
+  - identifier: CUSTOM_CONTAINER_INSTANCES
+    name: Ensure correct container instances
+    defaultMessageOnFailure: The container selected is very small
+    schema:
+       properties:
+        metadata:
+          properties:
+            labels:
+              properties:
+                instances:
+                  enum:
+                    - 4
+                    - 3
+                    - 2
+              required:
+                - instances
+          required:
+            - labels
