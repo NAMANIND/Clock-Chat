@@ -1,0 +1,41 @@
+apiVersion: v1
+policies:
+  - name: labels_best_practices
+    isDefault: true
+    rules:
+      - identifier: CUSTOM_CONTAINER_SIZE
+        messageOnFailure: ''
+      
+
+customRules:
+  - identifier: CUSTOM_CONTAINER_SIZE
+    name: Ensure correct container size
+    defaultMessageOnFailure: The container selected is very small
+    schema:
+       properties:
+        metadata:
+          properties:
+            labels:
+              properties:
+                size:
+                  enum:
+                    - g3.k3s.small
+                    - g3.k3s.medium
+              required:
+                - size
+          required:
+            - labels
+
+  - identifier: CUSTOM_USER_CHECK
+    name: Ensure runAsUser
+    defaultMessageOnFailure: You need to run this as User
+    schema:
+       properties:
+        spec:
+          properties:
+            securityContext:
+              required:
+                - sunAsUser
+          required:
+            - securityContext
+          
