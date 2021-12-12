@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Welcome To Clock Chat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed with a docker container on Azure.
+
+
+(You need to install npm and yarn to run this in your machine, or you can run it with our docker image-      )
+## Dependencies required
+### apt-get install npm
+### apt-get install yarn
+### yarn add stream-chat
+### yarn add stream-chat-react
+### yarn add styled-components
 
 ## Available Scripts
 
@@ -65,6 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
