@@ -2,6 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed with a docker container on Azure.
 
+## We have also made custom datree policies, which are in the datree-policy folder
 
 (You need to install npm and yarn to run this in your machine, or you can run it with our docker image-      )
 ## Dependencies required
