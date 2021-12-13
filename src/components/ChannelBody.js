@@ -16,7 +16,7 @@ const Container = styled.div`
     }
     .str-chat__input-flat-wrapper{
         position: absolute;
-        bottom: 20px;
+        bottom: 1vh;
         width: 100%;
        
     }
